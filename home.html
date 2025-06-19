@@ -129,24 +129,6 @@
       color: #64748b;
     }
 
-    .chatbot-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #00f2ff;
-      color: #0f172a;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 26px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      cursor: pointer;
-      z-index: 999;
-    }
-
     @media(max-width: 768px) {
       .hero h2 {
         font-size: 32px;
@@ -163,18 +145,19 @@
   <header>
     <h1>Congo Cash Pay</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Buy Card</a>
-      <a href="#">How It Works</a>
-      <a href="#">FAQs</a>
-      <a href="#">Login</a>
+      <a href="index.html">Home</a>
+      <a href="buy.html">Buy Card</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="faq.html">FAQs</a>
+      <a href="kyc.html">KYC</a>
+      <a href="login.html">Login</a>
     </nav>
   </header>
 
   <section class="hero">
     <h2>Buy Virtual Visa Cards Instantly — Use Globally</h2>
     <p>Make global payments, subscribe, and shop online securely with Congo Cash Pay virtual Visa cards. Fast delivery, full control.</p>
-    <button class="cta-btn" onclick="location.href='#'">Get Your Card</button>
+    <button class="cta-btn" onclick="location.href='buy.html'">Get Your Card</button>
   </section>
 
   <section class="features">
@@ -196,14 +179,19 @@
     &copy; 2025 Congo Cash Pay. All rights reserved.
   </footer>
 
-  <div class="chatbot-icon" onclick="openChatbot()">💬</div>
-
-  <script>
-    function openChatbot() {
-      alert("Chatbot integration coming soon...");
-      // Later you can link to Tawk.to, Crisp, etc.
-    }
+  <!-- ✅ Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function(){
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/685483ee0ae88a1913bc7097/1hpmdv4hf';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
 
 </body>
-        </html>
+</html>
