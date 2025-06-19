@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Congo Cash Pay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #00f2ff;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00f2ff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #00f2ff;
+      margin-bottom: 40px;
+    }
+
+    .faq {
+      background: #1e293b;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .faq:hover {
+      background: #223042;
+    }
+
+    .faq h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .faq p {
+      display: none;
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: #64748b;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header, nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Congo Cash Pay</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="buy.html">Buy Card</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="kyc.html">KYC</a>
+    <a href="faq.html" style="color: #00f2ff;">FAQs</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>1. What is a virtual Visa card?</h3>
+    <p>A virtual Visa card is a digital version of a physical card that can be used to pay online, subscribe, or make global purchases securely.</p>
+  </div>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>2. How much does a card cost?</h3>
+    <p>Each card costs $10, paid securely via PayPal. You’ll receive your card instantly after payment.</p>
+  </div>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>3. Where can I use the card?</h3>
+    <p>You can use it on most international websites that accept Visa — like Netflix, Amazon, Facebook Ads, and more.</p>
+  </div>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>4. Do I need to verify my identity (KYC)?</h3>
+    <p>Yes. You must submit KYC with ID and live face scan before your first card is activated.</p>
+  </div>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>5. How do I receive my card?</h3>
+    <p>After your PayPal payment, your virtual Visa card details (number, expiry, CVV) will be delivered to your dashboard or email automatically.</p>
+  </div>
+
+  <div class="faq" onclick="toggleFaq(this)">
+    <h3>6. Can I reload or reuse the card?</h3>
+    <p>No. The cards are single-use and disposable for better security. Buy a new card anytime you need.</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Congo Cash Pay. All rights reserved.
+</footer>
+
+<script>
+  function toggleFaq(element) {
+    const answer = element.querySelector("p");
+    answer.style.display = (answer.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+<!-- ✅ Tawk.to Live Chat -->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),
+        s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/685483ee0ae88a1913bc7097/1hpmdv4hf';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+
+</body>
+  </html>
