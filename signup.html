@@ -124,11 +124,9 @@
   <script>
     document.getElementById('signupForm').addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Simulate signup success
       sessionStorage.setItem('loggedIn', 'true');
-      alert('Sign up successful!');
-      window.location.href = 'kyc.html'; // redirect after signup
+      alert("Sign up successful!");
+      window.location.href = 'kyc.html';
     });
   </script>
 
