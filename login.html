@@ -120,11 +120,9 @@
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Simulate login success (you can later connect to backend)
       sessionStorage.setItem('loggedIn', 'true');
-      alert('Login successful!');
-      window.location.href = 'kyc.html'; // redirect to dashboard or KYC
+      alert("Login successful!");
+      window.location.href = 'kyc.html';
     });
   </script>
 
