@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Congo Cash Pay - Virtual Visa Cards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0F172A;
+      color: #fff;
+    }
+
+    header {
+      padding: 20px 40px;
+      background: #1E293B;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #00f2ff;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00f2ff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      font-weight: 700;
+      max-width: 700px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background: #00f2ff;
+      color: #0f172a;
+      border: none;
+      padding: 16px 36px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #0ff;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 80px 20px;
+      background: #1e293b;
+    }
+
+    .feature-card {
+      background: #0f172a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-card h3 {
+      color: #00f2ff;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: #94a3b8;
+    }
+
+    footer {
+      background: #0f172a;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00f2ff;
+      color: #0f172a;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Congo Cash Pay</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Buy Card</a>
+      <a href="#">How It Works</a>
+      <a href="#">FAQs</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Buy Virtual Visa Cards Instantly — Use Globally</h2>
+    <p>Make global payments, subscribe, and shop online securely with Congo Cash Pay virtual Visa cards. Fast delivery, full control.</p>
+    <button class="cta-btn" onclick="location.href='#'">Get Your Card</button>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>Instant Delivery</h3>
+      <p>Your virtual card is delivered immediately after PayPal payment.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Global Access</h3>
+      <p>Accepted on international websites, apps, and subscriptions.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Secure & Private</h3>
+      <p>No bank link needed. Pay and use securely anytime.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Congo Cash Pay. All rights reserved.
+  </footer>
+
+  <div class="chatbot-icon" onclick="openChatbot()">💬</div>
+
+  <script>
+    function openChatbot() {
+      alert("Chatbot integration coming soon...");
+      // Later you can link to Tawk.to, Crisp, etc.
+    }
+  </script>
+
+</body>
+        </html>
