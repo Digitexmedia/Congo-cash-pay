@@ -225,6 +225,10 @@
     alert("✅ Face captured and attached to form.");
   }
 </script>
-
+  if (!sessionStorage.getItem("loggedIn")) {
+    alert("Please log in to access this page.");
+    window.location.href = "login.html";
+  }
+</script>
 </body>
 </html>
