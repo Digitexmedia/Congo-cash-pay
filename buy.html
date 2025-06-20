@@ -186,6 +186,10 @@
       window.location.href = "login.html";
     }
   </script>
-
+  if (!sessionStorage.getItem("loggedIn")) {
+    alert("Please log in to access this page.");
+    window.location.href = "login.html";
+  }
+</script>
 </body>
 </html>
