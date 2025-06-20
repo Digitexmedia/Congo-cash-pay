@@ -1,17 +1,26 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buy Card - Congo Cash Pay</title>  <!-- PayPal SDK -->  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script> <!-- Replace sb with live client ID -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">  <style>
+  <title>Buy Card - Congo Cash Pay</title>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script> <!-- Replace "sb" with your live client ID -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
     * {
       margin: 0; padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
+
     body {
       background: #0f172a;
       color: #fff;
     }
+
     header {
       padding: 20px 40px;
       background: #1e293b;
@@ -19,33 +28,41 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header h1 {
       color: #00f2ff;
       font-size: 24px;
     }
+
     nav a {
       color: #cbd5e1;
       margin-left: 25px;
       text-decoration: none;
       font-weight: 500;
+      transition: 0.3s;
     }
+
     nav a:hover {
       color: #00f2ff;
     }
+
     .container {
       padding: 60px 20px;
       text-align: center;
     }
+
     .container h2 {
       font-size: 36px;
       margin-bottom: 20px;
       color: #00f2ff;
     }
+
     .container p {
       color: #94a3b8;
       font-size: 16px;
       margin-bottom: 40px;
     }
+
     .card-box {
       background: #1e293b;
       border-radius: 12px;
@@ -54,21 +71,25 @@
       margin: auto;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
+
     .card-box h3 {
       font-size: 20px;
       margin-bottom: 10px;
       color: #00f2ff;
     }
+
     .card-box p {
       color: #cbd5e1;
       font-size: 14px;
       margin-bottom: 20px;
     }
+
     .price {
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 20px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -76,71 +97,109 @@
       margin-top: 60px;
       color: #64748b;
     }
-  </style></head>
-<body>
-  <header>
-    <h1>Congo Cash Pay</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="buy.html">Buy Card</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="#" onclick="logout()">Logout</a>
-    </nav>
-  </header>  <section class="container">
-    <h2>Buy Your Virtual Visa Card</h2>
-    <p>Securely pay via PayPal. Card will be delivered automatically after payment.</p><div class="card-box">
-  <h3>Virtual Visa Card</h3>
-  <p>Works globally for online subscriptions and payments.</p>
-  <div class="price">$10.00</div>
-  <div id="paypal-button-container"></div>
-</div>
 
-  </section>  <footer>
-    &copy; 2025 Congo Cash Pay. All rights reserved.
-  </footer>  <script>
-    // Check login status
-    if (!sessionStorage.getItem("loggedIn")) {
-      alert("Please log in to access this page.");
-      window.location.href = "login.html";
-    }
-
-    // PayPal Payment
-    paypal.Buttons({
-      style: {
-        color: 'blue',
-        shape: 'pill',
-        label: 'paypal',
-        height: 40
-      },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            description: "Virtual Visa Card",
-            amount: { value: "10.00" },
-            payee: { email_address: "jumawycliffe490@gmail.com" }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert("Thanks, " + details.payer.name.given_name + "! Your card will be delivered shortly.");
-          localStorage.setItem("cardNumber", "4111 1111 1111 1234");
-          localStorage.setItem("cardExpiry", "12/27");
-          localStorage.setItem("cardCVV", "789");
-          localStorage.setItem("cardIssued", new Date().toLocaleString());
-          window.location.href = "my-card.html";
-        });
-      },
-      onError: function(err) {
-        console.error(err);
-        alert("Payment error. Please try again.");
+    @media (max-width: 768px) {
+      .container h2 {
+        font-size: 28px;
       }
-    }).render('#paypal-button-container');
-
-    function logout() {
-      sessionStorage.removeItem("loggedIn");
-      alert("You have been logged out.");
-      window.location.href = "login.html";
     }
-  </script></body>
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Congo Cash Pay</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="my-card.html">My Card</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h2>Buy Your Virtual Visa Card</h2>
+  <p>Securely pay via PayPal. Your card will be delivered automatically after payment.</p>
+
+  <div class="card-box">
+    <h3>Virtual Visa Card</h3>
+    <p>Works globally for online subscriptions and payments.</p>
+    <div class="price">$10.00</div>
+    <div id="paypal-button-container"></div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Congo Cash Pay. All rights reserved.
+</footer>
+
+<script>
+  // Protect page
+  if (!sessionStorage.getItem("loggedIn")) {
+    alert("Please log in to continue.");
+    window.location.href = "login.html";
+  }
+
+  // PayPal Integration
+  paypal.Buttons({
+    style: {
+      color: 'blue',
+      shape: 'pill',
+      label: 'paypal',
+      height: 40
+    },
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          description: "Virtual Visa Card",
+          amount: {
+            value: "10.00"
+          },
+          payee: {
+            email_address: "jumawycliffe490@gmail.com" // Replace with your PayPal
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert("Thank you " + details.payer.name.given_name + "! Your card has been delivered.");
+
+        // Store mock card in localStorage
+        localStorage.setItem("cardNumber", "4111 1111 1111 1234");
+        localStorage.setItem("cardExpiry", "12/27");
+        localStorage.setItem("cardCVV", "789");
+
+        // Redirect to view card
+        window.location.href = "my-card.html";
+      });
+    },
+    onError: function(err) {
+      console.error(err);
+      alert("Payment failed. Please try again.");
+    }
+  }).render('#paypal-button-container');
+
+  // Logout
+  function logout() {
+    sessionStorage.removeItem("loggedIn");
+    alert("You have been logged out.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<!-- Tawk.to -->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),
+        s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/685483ee0ae88a1913bc7097/1hpmdv4hf';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+
+</body>
 </html>
