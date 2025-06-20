@@ -185,7 +185,7 @@
   &copy; 2025 Congo Cash Pay. All rights reserved.
 </footer>
 
-<!-- ✅ Live Chat -->
+<!-- ✅ Tawk.to Chat -->
 <script type="text/javascript">
   var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
   (function(){
@@ -199,14 +199,19 @@
   })();
 </script>
 
-<!-- ✅ Camera Capture Script -->
+<!-- ✅ Access Control + Camera -->
 <script>
+  // 🔐 Protect page from non-logged-in users
+  if (!sessionStorage.getItem("loggedIn")) {
+    alert("Please log in to access this page.");
+    window.location.href = "login.html";
+  }
+
   const video = document.getElementById('video');
   const canvas = document.getElementById('snapshot');
   const context = canvas.getContext('2d');
   const faceInput = document.getElementById('faceImage');
 
-  // Ask for webcam access
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
       video.srcObject = stream;
@@ -225,10 +230,6 @@
     alert("✅ Face captured and attached to form.");
   }
 </script>
-  if (!sessionStorage.getItem("loggedIn")) {
-    alert("Please log in to access this page.");
-    window.location.href = "login.html";
-  }
-</script>
+
 </body>
 </html>
