@@ -161,23 +161,42 @@
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Congo Cash Pay. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 Congo Cash Pay. All rights reserved.
+</footer>
 
-  <!-- ✅ Tawk.to Live Chat -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function(){
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/685483ee0ae88a1913bc7097/1hpmdv4hf';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
+<!-- ✅ Tawk.to Live Chat -->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function(){
+    var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/685483ee0ae88a1913bc7097/1hpmdv4hf';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
 
-</body>
-</html>
+<!-- ✅ Smart login/logout -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector("nav");
+    const isLoggedIn = sessionStorage.getItem("loggedIn");
+
+    if (isLoggedIn) {
+      const loginLink = Array.from(nav.children).find(a => a.textContent.includes("Login"));
+      if (loginLink) {
+        loginLink.textContent = "Logout";
+        loginLink.href = "#";
+        loginLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          sessionStorage.removeItem("loggedIn");
+          alert("You’ve been logged out.");
+          location.reload();
+        });
+      }
+    }
+  });
+</script>
